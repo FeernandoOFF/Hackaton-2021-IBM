@@ -80,3 +80,26 @@ header {
   border-radius: 20px;
   background: rgba(41, 194, 74, 0.27);
 }
+
+.bottom button {
+  margin: 1rem auto;
+  padding: 1rem;
+  background: green;
+  display: block;
+}
+
+.product {
+  color: #333;
+  width: 30%;
+}
+.productContainer-img img {
+  width: 100%;
+}
+.productContainer-img {
+  width: 100%;
+  margin: 1rem auto;
+}
+.product p {
+  font-size: 1rem;
+  color: #333;
+}
