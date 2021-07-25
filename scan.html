@@ -46,9 +46,10 @@
         </div>
       </footer>
     </div>
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
+      let url = "http://73387cfdc4dc.ngrok.io/api/products/";
       let app = new Vue({
         el: "#app",
         data() {
@@ -63,20 +64,9 @@
           },
           send() {
             console.log("aaa");
-            this.data = [
-              {
-                product_name: "Pepsi",
-                product_image:
-                  "https://images-na.ssl-images-amazon.com/images/I/419O9cfMcpS._AC_SR38,50_.jpg",
-                carbono_per_unit: 200,
-              },
-              {
-                product_name: "Coca",
-                product_image:
-                  "https://m.media-amazon.com/images/I/71ndLC30s0L._AC_UL480_FMwebp_QL65_.jpg",
-                carbono_per_unit: 300,
-              },
-            ];
+            axios.get(url + "B08N4C4KTG").then((res) => {
+              console.log(res);
+            });
           },
         },
       });
