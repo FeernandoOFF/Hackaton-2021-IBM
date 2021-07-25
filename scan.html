@@ -30,7 +30,11 @@
       </div>
       <footer class="bottom">
         <button @click="send">OK</button>
-        <div class="options" v-if="currentProduct.product_name">
+        <div
+          class="options"
+          v-if="currentProduct.product_name"
+          @click="selectProduct(currentProduct)"
+        >
           <div class="product">
             Actual:
             <div class="productContainer-img">
@@ -70,7 +74,8 @@
         },
         methods: {
           selectProduct(product) {
-            console.log("PRODUCTO: ", product.product_name);
+            console.log("PRODUCTO: ", product.asin_number);
+            console.log(product);
           },
           send() {
             console.log("aaa");
