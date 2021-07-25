@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Coolest Vue - Axios Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <a href="index.html"
+          ><img src="img/logo.png" alt="img" class="imgContainer"
+        /></a>
+        <a
+          href="cart.html
+        "
+          ><img src="img/cart.png" alt="img" class="imgContainer"
+        /></a>
+      </header>
+      <div class="hero">
+        <!-- <div class="imgC"> -->
+        <!-- <img
+            src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80"
+            alt=""
+            srcset=""
+          /> -->
+        <div class="overlay"></div>
+      </div>
+      <footer class="bottom">
+        <h2>Seleccione una Opción</h2>
+        <div class="options">
+          <div class="select">
+            <a href="scan.html"><img src="" alt="option" /></a>
+          </div>
+          <div class="select">
+            <a href=""><img src="" alt="option" /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+
+  <script>
+    let app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          test: "",
+        };
+      },
+      methods: {},
+    });
+  </script>
+</html>
