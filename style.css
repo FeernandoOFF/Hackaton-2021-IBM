@@ -61,7 +61,7 @@ header {
   background: #f4f4f4;
   border-radius: 20px 20px 0 0;
   padding: 1rem;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 .bottom h2 {
@@ -69,6 +69,7 @@ header {
   font-size: 1rem;
 }
 .options {
+  flex-wrap: wrap;
   width: 90%;
   margin: 3rem auto;
   display: flex;
@@ -91,6 +92,7 @@ header {
 .product {
   color: #333;
   width: 30%;
+  margin: 1rem;
 }
 .productContainer-img img {
   width: 100%;
