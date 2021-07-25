@@ -18,6 +18,14 @@
       .productContainer-img {
         width: 50%;
       }
+      .total{
+          position: absolute;
+    width: 100%;
+    background: #607d8b;
+    padding: 1rem;
+    border-top: 30px solid #c4c4c4;
+    text-align: right;
+      }
     </style>
   </head>
 
@@ -33,7 +41,7 @@
           ><img src="img/cart.png" alt="img" class="imgContainer"
         /></a>
       </header>
-      <div class="hero">
+      <div class="hero2">
         <div
           class="product"
           v-for="product in data"
@@ -51,6 +59,9 @@
         </div>
       </div>
     </div>
+    <div class="total">
+        <p><strong>Total:</strong> {{total}}   </p>
+     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script>
@@ -71,13 +82,24 @@
         },
         mounted() {
           axios
-            .get(url + "B08G1Z9X3W")
+            .get(url + "B08N4C4KTG")
             .then((res) => res.data)
             .then((data) => {
                 console.log("RESPONSE: ",data);
               this.data = data.similarProducts;
             });
         },
+        computed: {
+            total: function (){
+                let all =0;
+                this.data.forEach(prod=>{
+                    all = all + prod.carbono_per_unit;
+                    console.log(prod.carbono_per_unit)
+                })
+                console.log("TODO: ",all)
+                return all;
+            }
+        }
       });
     </script>
   </body>
