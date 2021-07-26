@@ -113,9 +113,16 @@
         },
       });
       const video = document.querySelector("#videoElement");
+      let cosas = {
+        video: {
+          facingMode: {
+            exact: "environment",
+          },
+        },
+      };
       if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices
-          .getUserMedia({ video: true })
+          .getUserMedia(cosas)
           .then(function (stream) {
             console.log(stream);
             video.srcObject = stream;
