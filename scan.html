@@ -63,7 +63,11 @@
             </div>
 
             <h4>{{product.product_name.substring(0,10)}}</h4>
-            <p>{{product.carbono_per_unit}}</p>
+            <p
+              :class="{ok:product.carbono_per_unit<300,oknt:product.carbono_per_unit>199}"
+            >
+              {{product.carbono_per_unit}} ppm
+            </p>
           </div>
         </div>
       </footer>
@@ -89,7 +93,7 @@
           },
           send() {
             console.log("aaa");
-            axios.get(url + "B08N4C4KTG").then((res) => {
+            axios.get(url + "B088W1QJT2").then((res) => {
               console.log(res.data.product[0]);
               this.data = res.data.similarProducts;
               this.data.unshift(res.data.product[0]);
