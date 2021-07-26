@@ -25,18 +25,6 @@
       </header>
       <div class="hero">
         <video autoplay="true" id="videoElement"></video>
-        <img
-          src="img/qr-scan.png"
-          style="
-            position: absolute;
-            left: 50%;
-            right: 50%;
-            transform: translateX(-50%);
-            width: 35%;
-            top: 10%;
-          "
-          alt=""
-        />
         <!-- <div class="imgC"> -->
         <!-- <img
                 src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80"
@@ -93,7 +81,7 @@
           },
           send() {
             console.log("aaa");
-            axios.get(url + "B08N4C4KTG").then((res) => {
+            axios.get(url + "B01FY6YJ06").then((res) => {
               console.log(res.data.product[0]);
               this.data = res.data.similarProducts;
               this.data.unshift(res.data.product[0]);

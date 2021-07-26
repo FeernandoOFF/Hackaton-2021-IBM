@@ -82,17 +82,21 @@ header {
 }
 
 .bottom button {
+  width: 23%;
   margin: 1rem auto;
-  padding: 1rem;
-  background: green;
+  /* background: green; */
   display: block;
   border-radius: 20px;
   border: none;
 }
+button img {
+  width: 100%;
+}
 
 .product {
   color: #333;
-  width: 30%;
+  width: 35%;
+  padding: 10px;
   margin: 1rem;
 }
 .productContainer-img img {
@@ -105,4 +109,9 @@ header {
 .product p {
   font-size: 1rem;
   color: #333;
+}
+
+.selected {
+  border: 5px solid #7b8b80;
+  border-radius: 20px;
 }
