@@ -82,11 +82,11 @@
         },
         mounted() {
           axios
-            .get(url + "B08N4C4KTG")
+            .get(url + "cart")
             .then((res) => res.data)
             .then((data) => {
                 console.log("RESPONSE: ",data);
-              this.data = data.similarProducts;
+              this.data = data;
             });
         },
         computed: {

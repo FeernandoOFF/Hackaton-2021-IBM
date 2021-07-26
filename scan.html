@@ -51,11 +51,7 @@
         <button @click="addToCart()">
           <img src="img/select.png" alt="" />
         </button>
-        <div
-          class="options"
-          v-if="data[0]"
-          @click="selectProduct(currentProduct)"
-        >
+        <div class="options" v-if="data[0]">
           <div
             class="product"
             v-for="product in data"
@@ -100,16 +96,19 @@
             });
           },
           addToCart() {
-            axios
-              .post(url + "cart", {
-                products: this.selectedProducts,
-              })
-              .then((res) => res.data)
-              .then((data) => console.log(data));
+            console.log(this.selectedProducts);
+            this.selectedProducts.forEach((prod) => {
+              axios
+                .post(url + "cart", prod)
+                .then((res) => res.data)
+                .then((data) => console.log(data));
+            });
           },
         },
         created() {
-          this.send();
+          setTimeout(() => {
+            this.send();
+          }, 1000);
         },
       });
       const video = document.querySelector("#videoElement");
